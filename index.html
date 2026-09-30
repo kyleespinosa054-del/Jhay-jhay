@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background: linear-gradient(90deg, #e78bb8 0%, #e84393 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  #boogle {
+    width: 200px;
+    height: 200px;
+    background: white;
+    object-fit: cover;
+    opacity: 0;
+  }
+  #boogle.fade {
+    animation: fade-in-out 3s linear forwards;
+  }
+  @keyframes fade-in-out {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+  }
+  #start { background: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<h1 id="tstart"></h1>
+<img src="images/bestfriend.jpg" id="boogle">
+<button id="start">Start</button>
+
+<script>
+let tstart = document.querySelector("#tstart");
+let btn1 = document.querySelector("#start");
+let boogle = document.querySelector("#boogle");
+let count = 0;
+
+btn1.addEventListener("click", () => {
+  if(count == 0) { 
+    tstart.textContent = "Hello Jhay";
+    btn1.textContent = "Next";
+    count++;
+  } else if(count == 1) {
+    tstart.textContent = "Im sure, na alam mo kung ano to";
+    count += 1;
+  }
+  else if(count == 2) {
+    tstart.textContent = "So, happy birthday jhaylinnhaaa!";
+    count += 1;
+  }
+  else if(count == 3) {
+    tstart.textContent = "hope you Appreciate it";
+    count += 1;
+  }
+  else if(count == 4) {
+    tstart.textContent = "and may gift kame but not physical";
+    count += 1;
+  } else if(count == 5) {
+    tstart.textContent = "Ok na?";
+    boogle.classList.remove('fade');
+    void boogle.offsetWidth;
+    boogle.classList.add('fade');
+    count += 1
+  } else {
+    window.location.href = "message-s.html"
+  }
+});
+</script>
+</body>
+</html>

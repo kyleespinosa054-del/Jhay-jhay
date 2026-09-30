@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    background: linear-gradient(90deg, #e78bb8 0%, #e84393 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  #boogle {
+    width: 200px;
+    height: 200px;
+    background: white;
+    object-fit: cover;
+    opacity: 0;
+  }
+  #boogle.fade {
+    animation: fade-in-out 3s linear forwards;
+  }
+  @keyframes fade-in-out {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.5); }
+  }
+  #t{ background: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+</style>
+</head>
+<body>
+ <h1 id=t>anyways here is your gift</h1>
+  <a href=Gifts.html>
+      <button id=t class=next>Next</button>
+  </a>
+  <script>
+    
+  </script>
+</body>
+</html>
